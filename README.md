@@ -1,1 +1,0 @@
-# namerikawacity-2025
