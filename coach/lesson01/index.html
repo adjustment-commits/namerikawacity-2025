@@ -160,7 +160,19 @@ z-index:3000;   /* ← スライドより前面にする */
   object-fit: contain;
   cursor: pointer;
 }
+.img-row {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 20px;
+}
 
+.img-row .slide-img {
+  width: calc((100% - 48px) / 4); /* 4枚分 */
+  max-height: 22vh;
+  object-fit: contain;
+  cursor: pointer;
+}
 </style>
 </head>
 <body>
@@ -204,10 +216,12 @@ z-index:3000;   /* ← スライドより前面にする */
 <p>しかし、それでも「完全にコントロールできている」わけではない。</p>
 <div class="note">今日の講習はその入口を知ることです。</div>
 </div>
-<img class="slide-img" src="./images/page03-1.png" alt="">
-<img class="slide-img" src="./images/page03-2.png" alt="">
-<img class="slide-img" src="./images/page03-3.png" alt="">
-<img class="slide-img" src="./images/page03-4.png" alt="">
+<div class="img-row">
+  <img class="slide-img" src="./images/page03-1.png">
+  <img class="slide-img" src="./images/page03-2.png">
+  <img class="slide-img" src="./images/page03-3.png">
+  <img class="slide-img" src="./images/page03-4.png">
+</div>
 </section>
 <!-- 04 -->
 <section class="slide" data-index="3">
