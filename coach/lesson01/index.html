@@ -27,8 +27,13 @@ body {
   position:absolute;
   inset:0;
   display:flex;
-  .slide {
-  flex-direction: column;
+  flex-direction: column;  /* ← これだけでOK */
+  align-items:flex-start;
+  justify-content:center;
+  padding:60px 80px;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .25s ease;
 }
   align-items:flex-start;
   justify-content:center;
