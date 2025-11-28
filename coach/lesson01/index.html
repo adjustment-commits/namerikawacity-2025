@@ -32,6 +32,8 @@ body {
   opacity:0;
   pointer-events:none;
   transition:opacity .25s ease;
+  position:relative;
+  z-index:1; 
 }
 .slide.active {
   opacity:1;
@@ -119,6 +121,7 @@ li {
   display:flex;
   align-items:center;
   justify-content:center;
+  z-index:1000;
 }
 .footer-text {
   font-size:20px;
