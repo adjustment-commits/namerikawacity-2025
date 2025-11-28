@@ -23,19 +23,19 @@ body {
 }
 /* ===== スライド ===== */
 .slide {
-  position: absolute;
-  inset: 0;
-  height: calc(100vh - 140px);
-  overflow-y: auto;    /* ← これが正解 */
-  overflow-x: hidden;  /* 横は隠す */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: 40px 30px;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity .25s ease;
-  z-index: 1;
+  position:absolute;
+  inset:0;
+  height:100vh;
+  overflow-y:auto;
+  overflow-x:hidden;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  padding:110px 32px 80px;  /* ←ここ1行だけ変更 */
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .25s ease;
+  z-index:1;
 }
 .slide.active {
 opacity:1;
