@@ -576,29 +576,45 @@ z-index:3000;   /* ← スライドより前面にする */
     btnPrev.disabled=current===0;
     btnNext.disabled=current===slides.length-1;
   }
-  btnPrev.onclick=()=>{ if(current>0){current--;update();}};
-  btnNext.onclick=()=>{ if(current<slides.length-1){current++;update();}};
+
+  btnPrev.onclick=()=>{ 
+    if(current>0){
+      current--;
+      update();
+    }
+  };
+
+  btnNext.onclick=()=>{ 
+    if(current<slides.length-1){
+      current++;
+      update();
+    }
+  };
+
   document.addEventListener("keydown",e=>{
     if(e.key==="ArrowRight") btnNext.onclick();
     if(e.key==="ArrowLeft") btnPrev.onclick();
   });
+
   update();
+
   // 画像タップ拡大
-const imgs = document.querySelectorAll(".slide-img");
-const popup = document.getElementById("img-popup");
-const popupImg = document.getElementById("img-popup-img");
+  const imgs = document.querySelectorAll(".slide-img");
+  const popup = document.getElementById("img-popup");
+  const popupImg = document.getElementById("img-popup-img");
 
-imgs.forEach(img=>{
-  img.addEventListener("click",()=>{
-    popupImg.src = img.src;
-    popup.classList.add("active");
+  imgs.forEach(img=>{
+    img.addEventListener("click",()=>{
+      popupImg.src = img.src;
+      popup.classList.add("active");
+    });
   });
-});
 
-// ポップアップをタップで閉じる
-popup.addEventListener("click",()=>{
-  popup.classList.remove("active");
-});
+  // ポップアップをタップで閉じる
+  popup.addEventListener("click",()=>{
+    popup.classList.remove("active");
+  });
+})();
 </script>
 
 </body>
