@@ -1,22 +1,21 @@
 {
-“name”: “整-adjustment-｜自己紹介”,
-“short_name”: “adjustment”,
-“start_url”: “./”,
-“scope”: “./”,
-“display”: “standalone”,
-“background_color”: “#ffffff”,
-“theme_color”: “#00b386”,
-“description”: “整-adjustment-｜現場 × データ × 思考による選手支援。”,
-“icons”: [
-{
-“src”: “./assets/icons/icon-192.png”,
-“sizes”: “192x192”,
-“type”: “image/png”
-},
-{
-“src”: “./assets/icons/icon-512.png”,
-“sizes”: “512x512”,
-“type”: “image/png”
-}
-]
+  "name": "整-adjustment-｜自己紹介",
+  "short_name": "adjustment",
+  "start_url": "/namerikawacity-2025/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#00b386",
+  "description": "整-adjustment-｜現場 × データ × 思考による選手支援。",
+  "icons": [
+    {
+      "src": "/namerikawacity-2025/assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/namerikawacity-2025/assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
 }
