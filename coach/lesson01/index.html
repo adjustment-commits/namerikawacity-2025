@@ -23,22 +23,41 @@ body {
 }
 /* ===== スライド ===== */
 .slide {
-position:absolute;
-inset:0;
-height:100vh;
-overflow:hidden;        /* ← 追加：コンテンツが100vhを超えてもはみ出さない */
-display:flex;
-flex-direction:column;
-justify-content:flex-start;
-padding:40px 30px;
-opacity:0;
-pointer-events:none;
-transition:opacity .25s ease;
-z-index:1;
+  position: absolute;
+  inset: 0;
+  height: 100vh;
+  overflow-y: auto;    /* ← これが正解 */
+  overflow-x: hidden;  /* 横は隠す */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 40px 30px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .25s ease;
+  z-index: 1;
 }
 .slide.active {
 opacity:1;
 pointer-events:auto;
+}
+/* 画像ポップアップ */
+.img-popup-bg {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 5000;
+}
+.img-popup-bg.active {
+  display: flex;
+}
+.img-popup-img {
+  max-width: 95%;
+  max-height: 95%;
+  border-radius: 8px;
 }
 h1 {
   font-size:48px;
@@ -537,7 +556,10 @@ z-index:2000;   /* ← スライドより前面にする */
     © <strong>adjustment-lab</strong>｜教育講習スライド
   </div>
 </div>
-
+<!-- 画像ポップアップ -->
+<div class="img-popup-bg" id="img-popup">
+  <img id="img-popup-img" class="img-popup-img" src="">
+</div>
 <script>
 (function(){
   const slides=[...document.querySelectorAll(".slide")];
@@ -560,7 +582,24 @@ z-index:2000;   /* ← スライドより前面にする */
     if(e.key==="ArrowLeft") btnPrev.onclick();
   });
   update();
-})();
+  // 画像タップ拡大
+const imgs = document.querySelectorAll(".slide-img");
+const popup = document.getElementById("img-popup");
+const popupImg = document.getElementById("img-popup-img");
+
+imgs.forEach(img=>{
+  img.addEventListener("click",()=>{
+    popupImg.src = img.src;
+    popup.classList.add("active");
+  });
+});
+
+// ポップアップをタップで閉じる
+popup.addEventListener("click",()=>{
+  popup.classList.remove("active");
+});
 </script>
+
 </body>
 </html>
+
