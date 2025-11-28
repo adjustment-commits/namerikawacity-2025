@@ -45,6 +45,33 @@ header p {
   color:var(--accent);
   font-weight:700;
 }
+
+/* --- ブランド構造（field / lab / craft） --- */
+.brand-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:16px;
+  margin-top:18px;
+}
+.brand-card {
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:16px;
+  background:#fff;
+}
+.brand-title {
+  font-size:1.1rem;
+  font-weight:700;
+  margin:0 0 6px;
+  color:var(--text);
+}
+.brand-desc {
+  font-size:0.85rem;
+  color:var(--muted);
+  line-height:1.6;
+}
+
+/* --- gallery --- */
 .gallery-grid {
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
@@ -69,6 +96,8 @@ header p {
   font-size:0.82rem;
   line-height:1.5;
 }
+
+/* --- apps --- */
 .app-card {
   border:1px solid var(--line);
   border-radius:14px;
@@ -99,14 +128,45 @@ header p {
 <body>
 <header>
   <h1>整-adjustment-</h1>
-  <p>現場 × データ × 思考の三位一体で、選手の成長を支えるデジタル拠点。</p>
+  <p>現場 × データ × 思考がつながり、選手を支える仕組みをつくる。</p>
 </header>
-<!-- ===================== 基本プロフィール ===================== -->
+<!-- ===================== ブランド構造（追加部分） ===================== -->
+<section class="section">
+  <h2 class="section-title">ブランド構造</h2>
+  <p>
+    整-adjustment- を土台として、<br>
+    現場・理論・デザインの3つの視点から選手支援を体系化しています。
+  </p>
+  <div class="brand-grid">
+<div class="brand-card">
+  <p class="brand-title">adjustment-field</p>
+  <p class="brand-desc">
+    現場での指導・動作評価・身体調整。<br>
+    選手の変化を「いまここ」でつくる実践部門。
+  </p>
+</div>
+
+<div class="brand-card">
+  <p class="brand-title">adjustment-lab</p>
+  <p class="brand-desc">
+    理論化・データ分析・アプリ開発。<br>
+    現場で生まれた知見を、学びと再現性へ変換する研究部門。
+  </p>
+</div>
+
+<div class="brand-card">
+  <p class="brand-title">adjustment-craft</p>
+  <p class="brand-desc">
+    デザイン・教材制作・UI／UX。<br>
+    伝わる仕組みを形にするクリエイティブ部門。
+  </p>
+</div>  </div>
+</section>
 <section class="section">
   <h2 class="section-title">自己紹介</h2>
   <p>
     富山を拠点に社会人野球・育成年代野球の現場で活動。<br>
-    選手の「結果を出すtoughな身体」と「再現性を生む思考」を育てるため、<br>
+    選手の「結果を出す tough な身体」と「再現性を生む思考」を育てるため、<br>
     トレーニング・評価・データ活用・身体調整を統合したアプローチを実践。<br><br>
     整-adjustment- では、現場で得た知見をアプリ・教材として体系化し、<br>
     選手や指導者が自立して成長できる仕組みづくりを行っています。
@@ -116,37 +176,33 @@ header p {
 <section class="section">
   <h2 class="section-title">現場での様子</h2>
   <div class="gallery-grid">
-<div class="gallery-card">
-  <img class="gallery-photo" src="./assets/photos/01_jaba_team.jpg">
-  <p class="gallery-caption">JABA選抜チーム帯同</p>
-</div>
-
-<div class="gallery-card">
-  <img class="gallery-photo" src="./assets/photos/02_team_atmosphere.jpg">
-  <p class="gallery-caption">JABA選抜チームの風景</p>
-</div>
-
-<div class="gallery-card">
-  <img class="gallery-photo" src="./assets/photos/03_pre_game_training.jpg">
-  <p class="gallery-caption">試合前のフィールドトレーニング</p>
-</div>
-
-<div class="gallery-card">
-  <img class="gallery-photo" src="./assets/photos/04_data_bridge.jpg">
-  <p class="gallery-caption">データと現場の橋渡し</p>
-</div>
-
-<div class="gallery-card">
-  <img class="gallery-photo" src="./assets/photos/05_conditioning_room.jpg">
-  <p class="gallery-caption">コンディショニング調整</p>
-</div>
-
-<div class="gallery-card">
-  <img class="gallery-photo" src="./assets/photos/06_warmup_field.jpg">
-  <p class="gallery-caption">ウォーミングアップ風景</p>
-</div>  </div>
+    <div class="gallery-card">
+      <img class="gallery-photo" src="./assets/photos/01_jaba_team.jpg">
+      <p class="gallery-caption">JABA選抜チーム帯同</p>
+    </div>
+    <div class="gallery-card">
+      <img class="gallery-photo" src="./assets/photos/02_team_atmosphere.jpg">
+      <p class="gallery-caption">JABA選抜チームの風景</p>
+    </div>
+    <div class="gallery-card">
+      <img class="gallery-photo" src="./assets/photos/03_pre_game_training.jpg">
+      <p class="gallery-caption">試合前のフィールドトレーニング</p>
+    </div>
+    <div class="gallery-card">
+      <img class="gallery-photo" src="./assets/photos/04_data_bridge.jpg">
+      <p class="gallery-caption">データと現場の橋渡し</p>
+    </div>
+    <div class="gallery-card">
+      <img class="gallery-photo" src="./assets/photos/05_conditioning_room.jpg">
+      <p class="gallery-caption">コンディショニング調整</p>
+    </div>
+    <div class="gallery-card">
+      <img class="gallery-photo" src="./assets/photos/06_warmup_field.jpg">
+      <p class="gallery-caption">ウォーミングアップ風景</p>
+    </div>
+  </div>
 </section>
-<!-- ===================== 教材：中学3年生 ===================== -->
+<!-- ===================== 教材・プログラム ===================== -->
 <section class="section">
   <h2 class="section-title">教材・プログラム</h2>
   <div class="app-card">
@@ -155,18 +211,18 @@ header p {
     <a class="app-link" href="./coach/index.html" target="_blank">教材ページを見る</a>
   </div>
 </section>
-<!-- ===================== アプリ：Run Tracker ===================== -->
+<!-- ===================== アプリ ===================== -->
 <section class="section">
   <h2 class="section-title">アプリ</h2>
   <div class="app-card">
     <img class="app-img" src="./assets/photos/08_run_tracker.jpg">
-    <p class="app-caption">走力と思考を整える Run Tracker。走りの記録を蓄積し、VO₂max などの指標を可視化。</p>
+    <p class="app-caption">走力と思考を整える Run Tracker。走りの記録を蓄積し、VO₂max を可視化。</p>
     <a class="app-link" href="./products/apps/run-tracker/index.html" target="_blank">Run Tracker を開く</a>
   </div>
   <div style="height:18px"></div>
   <div class="app-card">
     <img class="app-img" src="./assets/photos/09_recovery_tracker.jpg">
-    <p class="app-caption">身体の状態を整える Recovery Tracker。睡眠・疲労感・コンディションを数値化。</p>
+    <p class="app-caption">身体の状態を整える Recovery Tracker。睡眠・疲労・コンディションを記録。</p>
     <a class="app-link" href="./products/apps/recovery-tracker/index.html" target="_blank">Recovery Tracker を開く</a>
   </div>
 </section>
