@@ -1,7 +1,8 @@
 {
 “name”: “整-adjustment-｜自己紹介”,
 “short_name”: “adjustment”,
-“start_url”: “./index.html”,
+“start_url”: “./”,
+“scope”: “./”,
 “display”: “standalone”,
 “background_color”: “#ffffff”,
 “theme_color”: “#00b386”,
