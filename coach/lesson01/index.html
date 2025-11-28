@@ -23,21 +23,22 @@ body {
 }
 /* ===== スライド ===== */
 .slide {
-  height:100vh;
-  overflow-y:auto;
-  display:flex;
-  flex-direction:column;
-  justify-content:flex-start;
-  padding:40px 30px;
-  opacity:0;
-  pointer-events:none;
-  transition:opacity .25s ease;
-  position:relative;
-  z-index:1; 
+position:absolute;
+inset:0;
+height:100vh;
+overflow:hidden;        /* ← 追加：コンテンツが100vhを超えてもはみ出さない */
+display:flex;
+flex-direction:column;
+justify-content:flex-start;
+padding:40px 30px;
+opacity:0;
+pointer-events:none;
+transition:opacity .25s ease;
+z-index:1;
 }
 .slide.active {
-  opacity:1;
-  pointer-events:auto;
+opacity:1;
+pointer-events:auto;
 }
 h1 {
   font-size:48px;
