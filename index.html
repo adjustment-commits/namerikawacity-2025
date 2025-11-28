@@ -118,9 +118,14 @@ header p {
   background:#fff;
 }
 .app-img {
-  width:100%;
-  border-radius:12px;
-  margin-bottom:12px;
+	width:100%;
+	border-radius:12px;
+	margin-bottom:12px;
+	width:100%;
+	max-width:260px;   /* ← 写真の最大幅を制限 */
+	display:block;     /* ← 中央寄せのため */
+	margin:0 auto 12px; /* ← 中央寄せ＋下に余白 */
+	border-radius:12px;
 }
 .app-caption {
   font-size:0.9rem;
