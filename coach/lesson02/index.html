@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>第2回｜歩く → 並進 — 間合いが生まれるフットコンタクト —</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+<meta name="theme-color" content="#ffffff">
+<style>
+:root {
+  --bg:#ffffff;
+  --text:#1a1a1a;
+  --accent:#00b386;
+  --muted:#555;
+  font-family:"Noto Sans JP","Hiragino Sans",sans-serif;
+}
+body {
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  overflow-x:hidden;
+}
+.slide {
+  position:absolute;
+  inset:0;
+  height:100vh;
+  overflow-y:auto;
+  overflow-x:hidden;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  padding:110px 32px 80px;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .25s ease;
+  z-index:1;
+}
+.slide.active {
+  opacity:1;
+  pointer-events:auto;
+}
+h1 {
+  font-size:48px;
+  margin:0 0 40px;
+  text-align:center;
+}
+h2 {
+  font-size:38px;
+  margin:0 0 24px;
+}
+p {
+  font-size:28px;
+  line-height:1.6;
+  margin:0 0 20px;
+}
+ul {
+  padding-left:32px;
+  margin:0 0 20px;
+}
+li {
+  font-size:28px;
+  margin-bottom:12px;
+  line-height:1.6;
+}
+.tag {
+  display:inline-block;
+  font-size:22px;
+  padding:6px 14px;
+  background:rgba(0,179,134,0.10);
+  border-left:5px solid var(--accent);
+  margin-bottom:20px;
+}
+.note {
+  font-size:24px;
+  line-height:1.5;
+  color:var(--muted);
+  border-left:6px solid var(--accent);
+  padding-left:16px;
+  margin-top:20px;
+}
+.navbar {
+  position:fixed;
+  left:0; right:0; bottom:60px;
+  height:70px;
+  background:#ffffffdd;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0 40px;
+  border-top:1px solid #ddd;
+  backdrop-filter:blur(8px);
+  z-index:3000;
+}
+.nav-btn {
+  font-size:26px;
+  padding:10px 24px;
+  border:none;
+  background:var(--accent);
+  color:#fff;
+  border-radius:8px;
+}
+.nav-btn[disabled] {
+  opacity:0.3;
+}
+.progress {
+  font-size:26px;
+  color:var(--muted);
+}
+.footer {
+  position:fixed;
+  left:0; right:0; bottom:0;
+  height:60px;
+  background:#ffffffd0;
+  backdrop-filter:blur(10px);
+  border-top:1px solid #ddd;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:500;
+}
+.footer-text {
+  font-size:20px;
+  color:var(--muted);
+}
+.footer-text strong {
+  color:var(--accent);
+}
+</style>
+</head>
+<body>
+<div id="slides-container">
+<section class="slide active">
+<span class="tag">導入</span>
+<h1>第2回：歩く → 並進</h1>
+<p>今日のテーマは<strong>「間合い」</strong>。</p>
+<p>距離の話ではない。</p>
+<p><strong>足で“時間”を作る</strong>話。</p>
+</section>
+<section class="slide">
+<span class="tag">復習</span>
+<h2>前回やったこと</h2>
+<ul>
+<li>足底三点</li>
+<li>横アーチ</li>
+<li>重心</li>
+</ul>
+<p>今日は<strong>立ったままでは終わらない</strong>。</p>
+</section>
+<section class="slide">
+<span class="tag">定義</span>
+<h2>間合いとは何か</h2>
+<p>間合いとは</p>
+<p><strong>距離ではなく時間</strong></p>
+<ul>
+<li>近くても「間」がある</li>
+<li>遠くても「間」がない</li>
+</ul>
+</section>
+<section class="slide">
+<span class="tag">現象</span>
+<h2>中学生に多い状態</h2>
+<ul>
+<li>動きが速すぎる</li>
+<li>止まれない</li>
+<li>合わせられない</li>
+</ul>
+<p>原因は<strong>フットコンタクト</strong>。</p>
+</section>
+<section class="slide">
+<span class="tag">守備</span>
+<h2>ゴロ捕球で起きていること</h2>
+<ul>
+<li>踵で入る</li>
+<li>減速はできる</li>
+<li>でも横アーチに戻れない</li>
+</ul>
+<p>結果：<strong>間が作れない</strong></p>
+</section>
+<section class="slide">
+<span class="tag">打撃</span>
+<h2>左足フットコンタクト</h2>
+<ul>
+<li>踵が早く着く</li>
+<li>トップが浅い</li>
+<li>体が急ぐ</li>
+</ul>
+<p>横アーチが<strong>時間を作れていない</strong>。</p>
+</section>
+<section class="slide">
+<span class="tag">共通</span>
+<h2>今日の共通ルール</h2>
+<ul>
+<li>踵から入ってもいい</li>
+<li>踵で終わらない</li>
+<li>横アーチに戻れた瞬間が「間」</li>
+</ul>
+</section>
+<section class="slide">
+<span class="tag">流れ</span>
+<h2>フットコンタクトの流れ</h2>
+<ul>
+<li>接地</li>
+<li>減速</li>
+<li>横アーチ</li>
+<li>次の動き</li>
+</ul>
+<p>今日は<strong>ここまで</strong>。</p>
+</section>
+<section class="slide">
+<span class="tag">軸足</span>
+<h2>軸足の役割</h2>
+<p>ステップしても</p>
+<p><strong>軸足は待つ</strong></p>
+<p>＝軸足お留守番</p>
+</section>
+<section class="slide">
+<span class="tag">失敗</span>
+<h2>よくある失敗</h2>
+<ul>
+<li>ステップ＝体が流れる</li>
+<li>軸足が消える</li>
+<li>上半身が急ぐ</li>
+</ul>
+<p>間が消える。</p>
+</section>
+<section class="slide">
+<span class="tag">注意</span>
+<h2>今日やらないこと</h2>
+<ul>
+<li>速いスイング</li>
+<li>強いスロー</li>
+<li>分離の練習</li>
+</ul>
+<p>今日は<strong>準備の回</strong>。</p>
+</section>
+<section class="slide">
+<span class="tag">体感</span>
+<h2>屋内で感じてほしいこと</h2>
+<ul>
+<li>止まれるか</li>
+<li>待てるか</li>
+<li>戻れるか</li>
+</ul>
+<p>できなくてOK。</p>
+</section>
+<section class="slide">
+<span class="tag">後半</span>
+<h2>このあとグラウンドで</h2>
+<ul>
+<li>ゴロ捕球</li>
+<li>ステップ</li>
+<li>打撃構え</li>
+</ul>
+<p>見るポイントは1つだけ。</p>
+</section>
+<section class="slide">
+<span class="tag">後半</span>
+<h2>このあとグラウンドで</h2>
+<ul>
+<li>ゴロ捕球</li>
+<li>ステップ</li>
+<li>打撃構え</li>
+</ul>
+<p>見るポイントは1つだけ。</p>
+</section>
+<section class="slide">
+<span class="tag">視点</span>
+<h2>評価基準</h2>
+<p><strong>間、あった？</strong></p>
+</section>
+<section class="slide">
+<span class="tag">まとめ</span>
+<h2>今日のまとめ</h2>
+<ul>
+<li>間合いは足で作る</li>
+<li>横アーチが時間</li>
+<li>軸足が待てると野球が変わる</li>
+</ul>
+</section>
+</div>
+<div class="navbar">
+<button class="nav-btn" id="btn-prev">◀ 前</button>
+<div class="progress" id="progress-text">1 / 15</div>
+<button class="nav-btn" id="btn-next">次 ▶</button>
+</div>
+<div class="footer">
+<div class="footer-text">© <strong>adjustment-lab</strong>｜教育講習スライド</div>
+</div>
+<script>
+(function(){
+  const slides=[...document.querySelectorAll(".slide")];
+  let current=0;
+  const progress=document.getElementById("progress-text");
+  const btnPrev=document.getElementById("btn-prev");
+  const btnNext=document.getElementById("btn-next");
+  function update(){
+    slides.forEach((s,i)=>s.classList.toggle("active",i===current));
+    progress.textContent=(current+1)+" / "+slides.length;
+    btnPrev.disabled=current===0;
+    btnNext.disabled=current===slides.length-1;
+  }
+  btnPrev.onclick=()=>{ if(current>0){ current--; update(); } };
+  btnNext.onclick=()=>{ if(current<slides.length-1){ current++; update(); } };
+  document.addEventListener("keydown",e=>{
+    if(e.key==="ArrowRight") btnNext.onclick();
+    if(e.key==="ArrowLeft") btnPrev.onclick();
+  });
+  update();
+})();
+</script>
+</body>
+</html>
